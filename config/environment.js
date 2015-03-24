@@ -4,8 +4,13 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'valet',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://burning-fire-3290.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
+    torii: {
+      sessionServiceName: 'session'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
