@@ -2,9 +2,12 @@
 
 
 {{#if session.isAuthenticated}}
-  <button {{ action 'logout' }}>Logout</button>
+  <button {{action 'logout' }}>Logout</button>
 {{else}}
-  <button {{ action 'login' }}>Login with Twitter</button>
+  <button {{action 'login' 'twitter'}}>Login with Twitter</button>
+  <button {{action 'login' 'google'}}>Login with Google</button>
+  <button {{action 'login' 'facebook'}}>Login with Facebook</button>
+  <button {{action 'login' 'github'}}>Login with GitHub</button>
 {{/if}}
 
 {{outlet}}
